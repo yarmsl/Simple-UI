@@ -8,8 +8,15 @@ export default {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
-    color: { control: 'color' },
+    type: {
+      options: ['button', 'reset', 'submit'],
+      mapping: {
+        button: 'Button',
+        reset: 'Reset',
+        submit: 'Submit',
+      },
+      control: 'radio',
+    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -21,16 +28,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: 'Кнопка',
   type: 'button',
-};
-
-export const Reset = Template.bind({});
-Reset.args = {
-  children: 'Button',
-  type: 'reset',
-};
-
-export const Submit = Template.bind({});
-Submit.args = {
-  children: 'Button',
-  type: 'submit',
+  disabled: true,
 };
