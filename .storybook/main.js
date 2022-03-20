@@ -1,8 +1,4 @@
 module.exports = {
-  reactOptions: {
-    fastRefresh: true,
-    strictMode: true,
-  },
   typescript: {
     check: false,
     checkOptions: {},
@@ -24,7 +20,6 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  
   webpackFinal: async (config, { configType }) => {
     const oneOfRule = config.module.rules.find((rule) => rule.oneOf);
     const babelRule = oneOfRule.oneOf.find((rule) =>

@@ -1,8 +1,12 @@
+import { ThemeProvider } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { withThemesProvider } from 'storybook-addon-emotion-theme';
 import { theme } from '../src/ui/theme';
 
-addDecorator(withThemesProvider([theme]));
+addDecorator((Story) => (
+  <ThemeProvider theme={theme}>
+    <Story />
+  </ThemeProvider>
+));
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
