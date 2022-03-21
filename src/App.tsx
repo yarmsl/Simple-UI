@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@emotion/react';
 import { memo } from 'react';
 import Router from './Router';
-import { theme } from './ui/theme';
+import { CssReset, theme } from './ui';
 
 const App = (): JSX.Element => (
   <ThemeProvider theme={theme}>
+    <CssReset />
     <Router />
   </ThemeProvider>
 );

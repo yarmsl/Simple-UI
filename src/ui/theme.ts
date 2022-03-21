@@ -15,4 +15,7 @@ export const theme: Theme = {
       text: '#000',
     },
   },
+  shape: {
+    radius: '4px',
+  },
 };
