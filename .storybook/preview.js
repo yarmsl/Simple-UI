@@ -1,9 +1,10 @@
 import { ThemeProvider } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { theme } from '../src/ui/theme';
+import { CssReset, theme } from '../src/ui';
 
 addDecorator((Story) => (
   <ThemeProvider theme={theme}>
+    <CssReset />
     <Story />
   </ThemeProvider>
 ));
