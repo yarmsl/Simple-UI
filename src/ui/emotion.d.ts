@@ -6,6 +6,9 @@ declare module '@emotion/react' {
       primary: IColorsTypes;
       secondary: IColorsTypes;
     };
+    shape: {
+      radius: string;
+    };
   }
 }
 

@@ -10,11 +10,6 @@ export default {
   argTypes: {
     type: {
       options: ['button', 'reset', 'submit'],
-      mapping: {
-        button: 'Button',
-        reset: 'Reset',
-        submit: 'Submit',
-      },
       control: 'radio',
     },
   },
