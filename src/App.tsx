@@ -1,13 +1,11 @@
-import { ThemeProvider } from '@emotion/react';
 import { memo } from 'react';
 import Router from './Router';
-import { CssReset, theme } from './ui';
+import { SimpleUIProvider } from './utils';
 
 const App = (): JSX.Element => (
-  <ThemeProvider theme={theme}>
-    <CssReset />
+  <SimpleUIProvider>
     <Router />
-  </ThemeProvider>
+  </SimpleUIProvider>
 );
 
 export default memo(App);
